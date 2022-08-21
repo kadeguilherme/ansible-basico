@@ -34,3 +34,4 @@ ansible_python_interpreter=/usr/bin/python3
 [webserver:vars]
 versao_nginx=2.1
 ```
+  Os `[]` representa um grupo, os grupos com sufixo `:vars` indicam variáveis para aquele grupo específico, no caso `ansible_python_interpreter=/usr/bin/python3` é passado para todos os hosts ,que é o caminho do Python3, desde o Ansible 2.8 o valor padrão ansible_python_interpreter é `auto_legacy`, ou seja, se existir o Python2 o caminho é `usr/bin/python`.
