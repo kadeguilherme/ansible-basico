@@ -35,3 +35,13 @@ ansible_python_interpreter=/usr/bin/python3
 versao_nginx=2.1
 ```
   Os `[]` representa um grupo, os grupos com sufixo `:vars` indicam variáveis para aquele grupo específico, no caso `ansible_python_interpreter=/usr/bin/python3` é passado para todos os hosts ,que é o caminho do Python3, desde o Ansible 2.8 o valor padrão ansible_python_interpreter é `auto_legacy`, ou seja, se existir o Python2 o caminho é `usr/bin/python`.
+  
+  
+# Comandos ad hoc
+Ansible Ad Hoc são comandos da CLI usados para tarefas simples, uma tarefa simples seria verificar se os nós está conectando com o node management. O ad hoc
+ e a playbook são comandos idempotente, ou seja, é verificado o estado do nó e caso o estado atual é igual ao estado da playbook ou ad hoc o comando não será executado.
+ ## Sintaxe 
+ ```
+ ansible <hosts> -m <nome_do_modulo> -a <argumentos>
+ ```
+ 
