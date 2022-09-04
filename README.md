@@ -47,9 +47,9 @@ Ansible Ad Hoc são comandos da CLI usados para tarefas simples, uma tarefa simp
  ansible <hosts> -m <nome_do_modulo> -a <argumentos>
  ```
  Vamos instalar um pacote com ad-hoc
-  ## Instalando um pacote
+  ## Instalando um pacote httpd
  ```
-
+ansible webservers -m ansible.builtin.yum -a "name=httpd state=installed"
  ```
  
  
